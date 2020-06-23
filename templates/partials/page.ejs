@@ -1,0 +1,3 @@
+<%- include(path.join(path.join(process.cwd(), "templates", 'partials', 'header.ejs')), { imports: null }); %>
+    <%- include(path.join(path.join(process.cwd(), "templates", 'pages', page.file )), { config: page.config }); %>      
+<%- include(path.join(path.join(process.cwd(), "templates", 'partials', 'footer.ejs')), { imports: null }); %>

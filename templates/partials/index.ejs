@@ -1,0 +1,15 @@
+<%- include(path.join(path.join(process.cwd(), "templates", 'partials', 'header.ejs')), { imports: null }); %>
+      
+        <div class="row">
+            <% pages.forEach(function(page){ %>
+                <div class="card col-sm-2 m-2" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%- page.name %> </h5>
+                        <p class="card-text"> <%- page.description %> </p>
+                        <a href="#" class="btn btn-primary"><%- page.file %></a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+      
+<%- include(path.join(path.join(process.cwd(), "templates", 'partials', 'footer.ejs')), { imports: null }); %>

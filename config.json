@@ -1,0 +1,20 @@
+{
+    "pages" : [
+        {
+            "name": "Inputs",
+            "file": "inputs",
+            "description" : "Basic operations with inputs",
+            "config": {
+                "someConfigValue":1
+            }
+        },
+        {
+            "name": "Buttons",
+            "file": "buttons",
+            "description" : "Basic operations with buttons",
+            "config": {
+                "someConfigValue":1
+            }
+        }
+    ]
+}
