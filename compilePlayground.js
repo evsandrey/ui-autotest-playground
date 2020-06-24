@@ -1,6 +1,6 @@
 'use strict';
 
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 let ejs = require('ejs');
 
@@ -14,6 +14,9 @@ let publicDir = path.join(process.cwd(), 'public');
 if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir);
 }
+
+// Copy libs to public folder
+fs.copy(path.join(process.cwd(),'static'),path.join(publicDir,'static'));
 
 // Compiling index file 
 ejs.renderFile(path.join(process.cwd(), 'templates', 'partials', 'index.ejs'), {pages: config.pages, path: path }, null, function(err, str){
