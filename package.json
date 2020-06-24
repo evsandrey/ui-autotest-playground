@@ -11,12 +11,14 @@
   "scripts": {
     "compile": "node compilePlayground.js",
     "start"  : "node compilePlayground.js && docker build -t at-playground . && docker run --rm --name target -d -p 80:80 at-playground",
+    "restart"  : "docker stop target && node compilePlayground.js && docker build -t at-playground . && docker run --rm --name target -d -p 80:80 at-playground",
     "stop"   : "docker stop target"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/evsandrey/ui-autotest-playground.git"
   },
+  
   "author": "",
   "license": "ISC",
   "bugs": {

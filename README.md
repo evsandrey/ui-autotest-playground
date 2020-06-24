@@ -4,5 +4,7 @@ Playground for UI autotests.
 
 To compile static files: 
 ```javascript 
-run npm run compile
+npm run compile
+npm run start 
+npm run stop
 ```
